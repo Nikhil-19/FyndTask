@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TMDBTask</string>
+    <string name="content_description">Poster Image Of Movie</string>
+    <string name="api_key">dfaf5827b1adb11c56e5a241953146f8</string>
+    <string name="error_msg">SomeThing went Wrong !!</string>
+    <string name="label_status">Status:</string>
+    <string name="label_budget">Budget:</string>
+    <string name="label_runtime">Runtime:</string>
+    <string name="label_revenue">Revenue:</string>
+    <string name="label_overview">Overview:</string>
+    <string name="label_homepage">HomePage:</string>
+    <string name="label_wish_list">WishList</string>
+    <string name="label_yes_btn">Yes</string>
+    <string name="label_no_btn">No</string>
+    <string name="wish_list_message">Do you want to add %1$s to wishlist ?</string>
+</resources>

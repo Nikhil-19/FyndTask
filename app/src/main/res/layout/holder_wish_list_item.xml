@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="movieData"
+            type="com.nikhil.tmdbtask.data.local.db.entity.ResultEntity" />
+
+        <variable
+            name="imageUrl"
+            type="String" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+     <LinearLayout
+         android:weightSum="10"
+         android:layout_margin="@dimen/margin3x"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:background="@drawable/image_bg"
+             app:profileImageEntity="@{imageUrl}"
+             android:layout_weight="3"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:contentDescription="@string/content_description" />
+
+         <LinearLayout
+             android:orientation="vertical"
+             android:padding="@dimen/padding3x"
+             android:layout_weight="7"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content">
+
+             <TextView
+                 android:textColor="@android:color/black"
+                 android:textStyle="bold"
+                 android:padding="@dimen/padding1x"
+                 android:textSize="21sp"
+                 android:text="@{movieData.title}"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="@dimen/margin1x"
+                 />
+
+             <TextView
+                 android:text="@{String.valueOf(movieData.voteAverage)}"
+                 android:padding="@dimen/padding1x"
+                 android:gravity="center|start"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="@dimen/margin1x"
+                 app:drawableStartCompat="@drawable/ic_baseline_star_rate_24"
+                 android:drawablePadding="@dimen/padding1x"
+                 />
+
+             <TextView
+                 android:text="@{movieData.setDate(movieData.releaseDate)}"
+                 android:padding="@dimen/padding1x"
+                 android:gravity="center|start"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:drawableStartCompat="@drawable/ic_baseline_calendar_today_24"
+                 android:drawablePadding="@dimen/padding1x"
+                 android:layout_marginBottom="@dimen/margin2x"
+                 />
+
+         </LinearLayout>
+
+     </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>
